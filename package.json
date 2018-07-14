@@ -1,0 +1,30 @@
+{
+  "name": "electron-quick-start",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "build": {
+    "files": [
+      "**/*",
+      "build/**/*"
+    ]
+  },
+  "scripts": {
+    "clean": "rm -rf build && rm -rf electron-quick-start-darwin-x64 && rm -rf dist",
+    "dist-via-electron-packager": "node_modules/.bin/electron-packager . --out=dist --platform=darwin",
+    "dist-via-electron-builder": "node_modules/.bin/build -m",
+    "start": "node_modules/.bin/electron app"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron with native code"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "2.0.5",
+    "electron-builder": "20.20.4",
+    "electron-packager": "12.1.0",
+    "node-gyp": "3.7.0"
+  }
+}
