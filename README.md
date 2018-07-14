@@ -1,11 +1,13 @@
 # electron-native
 
 This is a super simple Electron example, demonstrating how to package a native C component into an Electron app.
-Base on: [https://github.com/electron/electron-quick-start](https://github.com/electron/electron-quick-start)
+Based on: [https://github.com/electron/electron-quick-start](https://github.com/electron/electron-quick-start)
 
 ## To Use
 
-To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+To clone and run this repository you'll need [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) and [yarn](https://yarnpkg.com/) installed on your computer. 
+
+From your command line:
 
 ```bash
 # Clone this repository
@@ -13,15 +15,15 @@ git clone https://github.com/christophpurrer/electron-native.git
 # Go into the repository
 cd electron-native
 # Install dependencies
-npm install
+yarn install
 # Run the app
-npm start
+yarn start
 ```
 This will run the application.
 
 ## Package
 
-The app integrates 2 Electron app packagers: [electron-build](https://www.electron.build) and [electron-packager](https://github.com/electron-userland/electron-packager).
+The app integrates 2 Electron app packagers: [electron-builder](https://www.electron.build) and [electron-packager](https://github.com/electron-userland/electron-packager).
 
 ```bash
 # Package via electron-build

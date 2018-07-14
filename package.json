@@ -13,7 +13,7 @@
     "clean": "rm -rf build && rm -rf electron-quick-start-darwin-x64 && rm -rf dist",
     "dist-via-electron-packager": "node_modules/.bin/electron-packager . --out=dist --platform=darwin",
     "dist-via-electron-builder": "node_modules/.bin/build -m",
-    "start": "node_modules/.bin/electron app"
+    "start": "node_modules/.bin/electron ."
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
