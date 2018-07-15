@@ -4,9 +4,9 @@ const { app, BrowserWindow } = require('electron')
 
 let addon = null;
 try {
-  addon = require('./build/Debug/addon.node');
+  addon = require('./build/Debug/addon');
 } catch (err) {
-  addon = require('./build/Release/addon.node');
+  addon = require('./build/Release/addon');
 }
 
 // Prints: 'world'
