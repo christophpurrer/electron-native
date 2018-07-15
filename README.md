@@ -58,6 +58,9 @@ Disable it in the build block in package.json for further investigation in case 
 
 ![app folder](doc/app.folder.png "app folder")
 
+## Debugging
+Here is a [good article](https://medium.com/@atulanand94/debugging-nodejs-c-addons-using-vs-code-27e9940fc3ad) to debug a native addon with VSCode.
+
 ## Resources
 The hello.cc sample is based on [Node.js C++ Addons](https://nodejs.org/api/addons.html) documentation.
 
