@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(lldb) Attach",
+            "type": "cppdbg",
+            "request": "attach",
+            "program": "${workspaceRoot}/node_modules/.bin/electron",
+            // You want to attach to the node_modules/.bin/electron . process
+            "processId": "${command:pickProcess}",
+            "MIMode": "lldb"
+        }
+    ]
+}

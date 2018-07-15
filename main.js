@@ -1,7 +1,13 @@
 // Modules to control application life and create native browser window
 const { app, BrowserWindow } = require('electron')
 // hello.js
-const addon = require('./build/Release/addon');
+
+let addon = null;
+try {
+  addon = require('./build/Debug/addon.node');
+} catch (err) {
+  addon = require('./build/Release/addon.node');
+}
 
 // Prints: 'world'
 // Keep a global reference of the window object, if you don't, the window will
@@ -27,7 +33,9 @@ function createWindow() {
     mainWindow = null
   })
 
-  console.log(addon.hello());
+  setInterval(function () {
+    console.log(addon.hello());
+  }, 2000)
 }
 
 // This method will be called when Electron has finished
