@@ -5,20 +5,21 @@
   "main": "main.js",
   "build": {
     "files": [
-      "**/*",
-      "build/**/*"
+      "**/*.html",
+      "**/*.js",
+      "**/*.json",
+      "build/Release/*.node"
     ]
   },
   "scripts": {
-    "build-native": "yarn install && node_modules/.bin/electron-rebuild",
-    "clean": "rm -rf build && rm -rf dist",
-    "dist": "yarn build-native && node_modules/.bin/build -mw",
-	"dist-win": "yarn build-native && node_modules/.bin/build -w",
-    "dist-via-electron-packager": "yarn build-native && node_modules/.bin/electron-packager . --out=dist --platform=darwin",
-    "start": "yarn build-native && node_modules/.bin/electron .",
+    "clean": "rm -rf bin && rm -rf build && rm -rf dist",
+    "dist": "yarn install && node_modules/.bin/build -mw",
+    "dist-win": "yarn install && node_modules/.bin/build -w",
+    "dist-via-electron-packager": "yarn install && node_modules/.bin/electron-packager . --out=dist --platform=darwin",
+    "start": "yarn install && node_modules/.bin/electron .",
     "start-dbg": "yarn install && node-gyp build --debug && node_modules/.bin/electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/christophpurrer/electron-native",
   "keywords": [
     "Electron with native code"
   ],
@@ -28,8 +29,6 @@
     "electron": "2.0.5",
     "electron-builder": "20.20.4",
     "electron-packager": "12.1.0",
-    "electron-rebuild": "^1.8.1",
     "node-gyp": "3.7.0"
-  },
-  "dependencies": {}
+  }
 }
