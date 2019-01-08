@@ -3,9 +3,9 @@
 This is a super simple Electron example, demonstrating how to package a native C component into an Electron app.
 Based on: [https://github.com/electron/electron-quick-start](https://github.com/electron/electron-quick-start)
 
-## To Use
+## Start
 
-To clone and run this repository you'll need [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) and [yarn](https://yarnpkg.com/) installed on your computer. 
+To clone and run this repository you'll need [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com))) installed on your computer. 
 
 From your command line:
 
@@ -15,9 +15,9 @@ git clone https://github.com/christophpurrer/electron-native.git
 # Go into the repository
 cd electron-native
 # Install dependencies
-yarn install
+npm install
 # Run the app
-yarn start
+npm start
 ```
 This will run the application.
 
@@ -26,10 +26,9 @@ This will run the application.
 The app integrates 2 Electron app packagers: [electron-builder](https://www.electron.build) and [electron-packager](https://github.com/electron-userland/electron-packager).
 
 ```bash
-# Package via electron-build
-yarn dist-via-electron-builder 
-# Package via electron-packager
-yarn dist-via-electron-packager
+# Package
+npm dist
+npm dist-win
 ```
 
 The crucial setting to packaging of native components work with electron-builder is:

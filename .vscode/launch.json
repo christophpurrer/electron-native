@@ -5,10 +5,23 @@
             "name": "(lldb) Attach",
             "type": "cppdbg",
             "request": "attach",
-            "program": "${workspaceRoot}/node_modules/.bin/electron",
-            // You want to attach to the node_modules/.bin/electron . process
+            "program": "${workspaceRoot}/build/Debug/addon.node",
+            "preLaunchTask": "npmBuild",
             "processId": "${command:pickProcess}",
             "MIMode": "lldb"
+        },
+        {
+            "name": "Debug Main Process",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron",
+            "windows": {
+                "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron.cmd"
+            },
+            "args": [
+                "."
+            ]
         }
     ]
 }

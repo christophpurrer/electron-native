@@ -1,5 +1,6 @@
 // Modules to control application life and create native browser window
 const { app, BrowserWindow } = require('electron')
+const ANSWER = 42;
 // hello.js
 
 let addon = null;
@@ -17,7 +18,7 @@ let mainWindow
 
 function createWindow() {
   // Create the browser window.
-  mainWindow = new BrowserWindow({ width: 800, height: 600, title: addon.hello() })
+  mainWindow = new BrowserWindow({ width: 800, height: 600, title: addon.hello(ANSWER) })
 
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
@@ -34,7 +35,7 @@ function createWindow() {
   })
 
   setInterval(function () {
-    console.log(addon.hello());
+    console.log(addon.hello(ANSWER));
   }, 2000)
 }
 

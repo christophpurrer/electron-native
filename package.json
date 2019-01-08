@@ -1,6 +1,6 @@
 {
-  "name": "electron-quick-start",
-  "version": "1.0.0",
+  "name": "electron-native-quick-start",
+  "version": "1.0.1",
   "description": "A minimal Electron application",
   "main": "main.js",
   "build": {
@@ -12,13 +12,12 @@
     ]
   },
   "scripts": {
+    "build": "node_modules/.bin/node-gyp build --debug",
     "clean": "rm -rf bin && rm -rf build && rm -rf dist",
-    "dist": "yarn install && node_modules/.bin/build -mw",
-    "dist-win": "yarn install && node_modules/.bin/build -w",
-    "dist-via-electron-packager": "yarn install && node_modules/.bin/electron-packager . --out=dist --platform=darwin",
+    "dist": "npm install && node_modules/.bin/build -mw",
+    "dist-win": "npm install && node_modules/.bin/build -w",
     "postinstall": "node_modules/.bin/electron-rebuild",
-    "start": "yarn install && node_modules/.bin/electron .",
-    "start-dbg": "yarn install && node-gyp build --debug && node_modules/.bin/electron ."
+    "start": "npm run build && node_modules/.bin/electron ."
   },
   "repository": "https://github.com/christophpurrer/electron-native",
   "keywords": [
@@ -27,10 +26,9 @@
   "author": "Christoph Purrer",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "2.0.5",
-    "electron-builder": "20.20.4",
-    "electron-packager": "12.1.0",
-    "electron-rebuild": "^1.8.1",
-    "node-gyp": "3.7.0"
+    "electron": "4.0.1",
+    "electron-builder": "20.29.0",
+    "electron-rebuild": "1.8.2",
+    "node-gyp": "3.8.0"
   }
 }
