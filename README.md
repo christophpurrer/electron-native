@@ -59,20 +59,31 @@ Disable it in the build block in package.json for further investigation in case 
 
 ## Debugging
 Here is a [good article](https://medium.com/@atulanand94/debugging-nodejs-c-addons-using-vs-code-27e9940fc3ad) to debug a native addon with VSCode.
-
 You are interested in 3 kinds of debugging scenarios:
-1.) Chromium Render process. 
+
+1.) Chromium Render process
+
 Use Chrome Developers tools.
+
 ![Debug Render process](doc/debug.render.png "Debug Render Process")
 
-2.) Node.js main process. 
+2.) Node.js main process
+
 Launch app from [VSCode](https://code.visualstudio.com/) using the 'Debug Main Process' debug configuration.
+
 ![Debug Node.js Main process](doc/debug.main.png "Debug Node.js Main Process")
 
-3.) Native C/C++ code. 
-Launch app from the command line: npm start. 
-Launch/attach the Native C/C++ debugger from [VSCode](https://code.visualstudio.com/) using the '(lldb) Attach' debug configuration.
+3.) Native C/C++ code
+
+Launch app from the command line:
+```
+npm start
+```
+Launch/attach the native C/C++ debugger from [VSCode](https://code.visualstudio.com/) using the '(lldb) Attach' debug configuration.
+
 ![Attach Native C/C++ debugger](doc/debug.native1.png "Attach Native C/C++ debugger")
+
+Debug native C/C++ code.
 
 ![Debug Native C/C++ code](doc/debug.native2.png "Debug Native C/C++ code")
 
