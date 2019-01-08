@@ -5,7 +5,7 @@ Based on: [https://github.com/electron/electron-quick-start](https://github.com/
 
 ## Start
 
-To clone and run this repository you'll need [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com))) installed on your computer. 
+To clone and run this repository you'll need [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. 
 
 From your command line:
 
@@ -23,12 +23,12 @@ This will run the application.
 
 ## Package
 
-The app integrates 2 Electron app packagers: [electron-builder](https://www.electron.build) and [electron-packager](https://github.com/electron-userland/electron-packager).
+The app integrates the Electron app packager: [electron-builder](https://www.electron.build):
 
 ```bash
 # Package
-npm dist
-npm dist-win
+npm run dist
+npm run dist-win
 ```
 
 The crucial setting to packaging of native components work with electron-builder is:
@@ -59,6 +59,22 @@ Disable it in the build block in package.json for further investigation in case 
 
 ## Debugging
 Here is a [good article](https://medium.com/@atulanand94/debugging-nodejs-c-addons-using-vs-code-27e9940fc3ad) to debug a native addon with VSCode.
+
+You are interested in 3 kinds of debugging scenarios:
+1.) Chromium Render process. 
+Use Chrome Developers tools.
+![Debug Render process](doc/debug.render.png "Debug Render Process")
+
+2.) Node.js main process. 
+Launch app from [VSCode](https://code.visualstudio.com/) using the 'Debug Main Process' debug configuration.
+![Debug Node.js Main process](doc/debug.main.png "Debug Node.js Main Process")
+
+3.) Native C/C++ code. 
+Launch app from the command line: npm start. 
+Launch/attach the Native C/C++ debugger from [VSCode](https://code.visualstudio.com/) using the '(lldb) Attach' debug configuration.
+![Attach Native C/C++ debugger](doc/debug.native1.png "Attach Native C/C++ debugger")
+
+![Debug Native C/C++ code](doc/debug.native2.png "Debug Native C/C++ code")
 
 ## Resources
 The hello.cc sample is based on [Node.js C++ Addons](https://nodejs.org/api/addons.html) documentation.

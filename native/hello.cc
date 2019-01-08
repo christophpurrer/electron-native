@@ -1,5 +1,6 @@
 // hello.cc
 #include <node.h>
+#include <string>
 using namespace std;
 
 namespace demo
